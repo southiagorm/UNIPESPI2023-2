@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _isGrounded = Physics2D.OverlapCircle(_ground.transform.position, 0.3f, _layerMask);
+        _isGrounded = Physics2D.OverlapCircle(_ground.transform.position, 0.01f, _layerMask);
         _rb.velocity = new Vector2(_h*_speed*Time.deltaTime, _rb.velocity.y);
     }
 
